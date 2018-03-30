@@ -198,7 +198,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 613}
   m_MaxSize: {x: 10002, y: 18063}
   vertical: 1
-  controlID: 95
+  controlID: 29
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -485,7 +485,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 58f3fcff76f4fcff7ef7fcff9efbffff00000000
+    m_ExpandedIDs: 1204ffffc804ffffce07ffff100cffffc40cffffd80fffff78b6ffff2eb7ffff40baffffbae2ffff66e3ffff78e6ffff9efbffff00000000643d00006e3d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -547,19 +547,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Characters/_Enemy
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Characters/_Enemy
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\dpool\Documents\darkpoole\MettleMini
+  m_LastProjectPath: C:\Users\dpool\Documents\darkpoole\MettleMachine\MettleMini
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 0e2b0000
-    m_LastClickedID: 11022
-    m_ExpandedIDs: 000000000e2b00002c2b00003a2b00009e2b0000ac2b0000c02b00003e2c00006a2c00006c2c0000a02c0000e02c0000f22c00000c2d00002a2d0000b42d0000d22d0000062e0000922e0000ba2e0000dc2e0000042f00001e2f0000602f0000b62f0000f22f000086300000b6310000ba310000d23100001e3200006232000084320000a63200000a330000e6330000363400005a34000094340000943b0000963b0000983b00009a3b00009c3b00009e3b0000a03b0000a23b0000a43b0000a63b0000a83b0000aa3b0000ac3b0000ae3b000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 363}
+    m_SelectedIDs: 9e2b0000
+    m_LastClickedID: 11166
+    m_ExpandedIDs: 000000000e2b00002c2b00003a2b00009e2b0000ac2b0000c02b00003e2c00006a2c00006c2c0000a02c0000e02c0000f22c00000c2d00002a2d0000b42d0000d22d0000062e0000922e0000ba2e0000dc2e0000042f00001e2f0000602f0000b62f0000f22f000086300000b6310000ba310000d23100001e320000623200007032000084320000a63200000a330000e8330000383400005a34000094340000943b0000963b0000983b00009a3b00009c3b00009e3b0000a03b0000a23b0000a43b0000a63b0000a83b0000aa3b0000ac3b0000ae3b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -587,7 +587,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000e2b00002c2b00003a2b00009e2b0000ac2b0000c02b00003e2c00006a2c00006c2c0000a02c0000e02c0000f22c00000c2d00002a2d0000b42d0000d22d0000062e0000922e0000ba2e0000dc2e0000042f00001e2f0000602f0000b62f0000f22f000086300000b6310000ba310000d23100001e3200006232000084320000a63200000a330000e6330000363400005a34000094340000943b0000963b0000983b00009a3b00009c3b00009e3b0000a03b0000a23b0000a43b0000a63b0000a83b0000aa3b0000ac3b0000ae3b0000
+    m_ExpandedIDs: 000000000e2b00002c2b00003a2b00009e2b0000ac2b0000c02b00003e2c00006a2c00006c2c0000a02c0000e02c0000f22c00000c2d00002a2d0000b42d0000d22d0000062e0000922e0000ba2e0000dc2e0000042f00001e2f0000602f0000b62f0000f22f000086300000b6310000ba310000d23100001e3200006232000084320000a63200000a330000e8330000383400005a34000094340000943b0000963b0000983b00009a3b00009c3b00009e3b0000a03b0000a23b0000a43b0000a63b0000a83b0000aa3b0000ac3b0000ae3b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -614,22 +614,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: ea3100008c310000c6310000f82a0000c63affffe8aafeffe02b00009029000072caf9ffb29bf9ff0a370000c4290000382b0000f24500008a2a0000442c0000f62b000092c800004ef9e8ffc8330000243c0000d62a00005e2a00002e2b00001e2a0000002e00009ad6f9ffdaedf5ffb08200006c2d0000cc2f00005eb5f7ff6e2d000098c7e6ff762e00009a2f0000ae04f1ff7231000006300000123100009c310000f001feff9c21feffa86af4ff7c300000402d0000feb3ffff80300000e82b00002a46fcffda5400003e330000b82f00007c2b000066300000e83100008a330000743300002cace7ff74010000d0300000f6f6f9ff28cefbff4a7dffff7431000044d0f7ff6050effff8940000e6300000bc2f00003a2e0000303100002a300000c0310000ec2d0000de27ffff7a340000b22f0000982c0000d82b0000fa2c00002a320000442b0000662d0000503000003e2c000094340000e22b0000183200006a2f0000c0320000f02b0000963400003a3200001a2b0000e42b00001ea400004c2c0000742d0000fa310000163400004cd1d3ff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: MiniTouchInputController
+      m_OriginalName: MiniTouchInputController
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 16490
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
@@ -881,9 +881,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 658.93396, y: 675.4109, z: -4.25}
+    m_Target: {x: 624.3179, y: 707.10425, z: -4.8180046}
     speed: 2
-    m_Value: {x: 658.93396, y: 675.4109, z: -4.25}
+    m_Value: {x: 624.3179, y: 707.10425, z: -4.8180046}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -911,9 +911,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1242.6862
+    m_Target: 1298.607
     speed: 2
-    m_Value: 1242.6862
+    m_Value: 1298.607
   m_Ortho:
     m_Target: 1
     speed: 2
