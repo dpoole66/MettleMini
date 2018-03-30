@@ -1,0 +1,13 @@
+﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupItem="Mettle001.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_prefabs\Stage\_scripts\IPointerClickHandler.cs">
+    <Files>
+      <File FileName="Assets\_prefabs\Stage\_scripts\ButtonOver.cs" Line="6" Column="56" />
+      <File FileName="Assets\_prefabs\Stage\_scripts\IPointerClickHandler.cs" Line="6" Column="27" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

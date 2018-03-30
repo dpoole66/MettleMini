@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/_scenes/Stage001.unity
+    guid: e376dfb5023ae1647ab35ca4c62996df
+  - enabled: 0
+    path: Assets/_scenes/Stage002.unity
+    guid: 92385ca490aac1443a42992e2085cc30
+  - enabled: 0
+    path: Assets/_scenes/Stage003.unity
+    guid: f577005a105e14548b82a6b32831354c
+  - enabled: 0
+    path: Assets/_scenes/Stage004.unity
+    guid: ded6cb818cbf2c24eaa84a28b63b1cff
+  - enabled: 0
+    path: Assets/_scenes/Stage005.unity
+    guid: b51ccc95df0e32f4eb9f19d7a2bc6d49
+  - enabled: 0
+    path: Assets/_scenes/Stage006.unity
+    guid: ecbc1c2891fd503489358f71319b8912
+  - enabled: 0
+    path: Assets/_scenes/ARStage.unity
+    guid: 0e27d78481e133b438d14b9b0366aea1
+  - enabled: 0
+    path: Assets/_scenes/StartStage.unity
+    guid: f3fad73b64d959f42bca7b90ade23daa
+  - enabled: 0
+    path: Assets/_scenes/Start.unity
+    guid: 9ba0dd771b6e9f04bbe78d2f0f230535
+  - enabled: 0
+    path: Assets/_scenes/Max.unity
+    guid: 0d39144647d45434c8dc4a8adcbbda94
+  - enabled: 0
+    path: Assets/_scenes/Table.unity
+    guid: 0fcc833b76ddcee409a018373b976c2d
+  - enabled: 0
+    path: Assets/_scenes/Table02_Joy1a.unity
+    guid: 30116f61349ccd54e8efcd2e3a8fb39c
+  - enabled: 0
+    path: Assets/_scenes/NavStage.unity
+    guid: f9aad4ac4e0b4d644971d1659a8f7abd
+  - enabled: 0
+    path: Assets/_scenes/Battle01.unity
+    guid: 893a0de907a5dd54fb2091a73baa5031
+  - enabled: 0
+    path: Assets/_scenes/NoNavStage.unity
+    guid: c80062c82875b3944a1d0e8b0c52b6e8
+  - enabled: 1
+    path: Assets/_scenes/BattlePlayerA.unity
+    guid: a373b4b47136dac4ba320bdd9341efb7
