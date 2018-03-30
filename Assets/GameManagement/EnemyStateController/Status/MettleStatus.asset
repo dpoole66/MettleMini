@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2457ea1ad8f6524e928eb90cdf57ab4, type: 3}
+  m_Name: MettleStatus
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  rotateSpeed: 3
+  lookRange: 5
+  lookSphereCastRadius: 0.5
+  advanceRange: 4
+  alertRange: 4
+  chaseRange: 3
+  attackRange: 2
+  attackRate: 1
+  attackForce: 15
+  attackDamage: 20
+  searchDuration: 4
+  searchingTurnSpeed: 120
+  enemyAttacking: 0
+  enemyDefending: 0

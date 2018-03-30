@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ef6cd1fd0b4a945bb683d938d1b7d9, type: 3}
+  m_Name: LookTarget
+  m_EditorClassIdentifier: 
+  t_Target: {fileID: 4715218697416544, guid: 443fe5a48d373324db771770645b099e, type: 2}
