@@ -319,6 +319,7 @@
     <Compile Include="Assets\Characters\_Enemy\_Scripts\LineSightLtd.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\MiniContorller.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\MiniInputController.cs" />
+    <Compile Include="Assets\Characters\_Player\_Scripts\MiniTouchInputController.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\Older\DumDum.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\Older\MiniControllerX.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\Older\PlayerController2.cs" />

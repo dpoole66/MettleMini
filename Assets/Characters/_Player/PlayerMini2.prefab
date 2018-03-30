@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 95943803528841234}
   - component: {fileID: 54025302643769156}
   - component: {fileID: 136214689649086938}
-  - component: {fileID: 114863000469489752}
+  - component: {fileID: 114709334396512664}
   m_Layer: 0
   m_Name: PlayerMini2
   m_TagString: Player
@@ -2454,6 +2454,24 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114709334396512664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315142198955146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c4f7f913966ad4789c89fff0b96ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Anim: {fileID: 0}
+  m_Rigid: {fileID: 0}
+  m_Enemy: {fileID: 4985960006659620, guid: 1ec940afd5b131644a69ca50b04d8945, type: 2}
+  setMovementRange: 0.01
+  Speed: 0.3
+  enGuardRange: 0.2
+  attackRange: 0.1
 --- !u!114 &114823540921683508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2481,24 +2499,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 0
   m_FillOrigin: 0
---- !u!114 &114863000469489752
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1315142198955146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f85800a3da41e4c99a36d725c30675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Anim: {fileID: 0}
-  m_Rigid: {fileID: 0}
-  m_Enemy: {fileID: 4985960006659620, guid: 1ec940afd5b131644a69ca50b04d8945, type: 2}
-  setMovementRange: 0.01
-  Speed: 0.3
-  enGuardRange: 0.2
-  attackRange: 0.1
 --- !u!136 &136214689649086938
 CapsuleCollider:
   m_ObjectHideFlags: 1

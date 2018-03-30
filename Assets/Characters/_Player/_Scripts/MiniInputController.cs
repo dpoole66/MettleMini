@@ -65,14 +65,6 @@ public class MiniInputController : MonoBehaviour {
 
         //touch/mouse input to move player
         if (Input.GetMouseButton(0) && !inRange) {
-             //Mouse awareness (debug)
-             if(EventSystem.current.IsPointerOverGameObject()){
-                    return;
-             }
-             //Touch awareness
-            if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began) {    
-                return;                   
-            }
 
             m_Speed = 3.0f;
                 Plane playerPlane = new Plane(Vector3.up, m_PlayerTrans.position);
@@ -86,23 +78,25 @@ public class MiniInputController : MonoBehaviour {
 
                 if (playerPlane.Raycast(ray, out hitdist)) {
 
-                    Vector3 targetPoint = ray.GetPoint(hitdist);
-                    destinationPos = ray.GetPoint(hitdist);
-                    Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
-                    m_PlayerTrans.rotation = targetRotation;
+                    if (!IsPointerOverUIObject()) {
 
-                    var Range = Vector3.Distance(m_PlayerTrans.position, targetPoint);
+                        Vector3 targetPoint = ray.GetPoint(hitdist);
+                        destinationPos = ray.GetPoint(hitdist);
+                        Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
+                        m_PlayerTrans.rotation = targetRotation;
 
-                    m_PlayerTrans.position = Vector3.MoveTowards(m_PlayerTrans.position, destinationPos, Speed * Time.deltaTime);
-                    Debug.Log(Speed);
+                        var Range = Vector3.Distance(m_PlayerTrans.position, targetPoint);
 
-                    if (Range <= setMovementRange) {     //This is to stop the char from continuing to try to hit the target while in input touch down
+                        m_PlayerTrans.position = Vector3.MoveTowards(m_PlayerTrans.position, destinationPos, Speed * Time.deltaTime);
+                        Debug.Log(Speed);
 
-                        inRange = true;
-                        m_Speed = 0.0f;
+                        if (Range <= setMovementRange) {     //This is to stop the char from continuing to try to hit the target while in input touch down
 
+                            inRange = true;
+                            m_Speed = 0.0f;
+
+                        }
                     }
-
                 }
 
         } else {
@@ -125,6 +119,17 @@ public class MiniInputController : MonoBehaviour {
 
         //monitor distance between player and destinationPos
         destinationDis = Vector3.Distance(destinationPos, m_PlayerTrans.position);
+
+    }
+
+    //UI Touch and Button control to prevent raycast passthrough
+    private bool IsPointerOverUIObject(){
+
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
 
     }
 

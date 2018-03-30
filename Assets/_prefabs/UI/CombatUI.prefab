@@ -159,9 +159,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1315142198955146, guid: 84b110ddaa483324bb0ee7c7e38f7162,
+      - m_Target: {fileID: 114863000469489752, guid: 84b110ddaa483324bb0ee7c7e38f7162,
           type: 2}
-        m_MethodName: 
+        m_MethodName: B_Defend_1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -321,9 +321,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1315142198955146, guid: 84b110ddaa483324bb0ee7c7e38f7162,
+      - m_Target: {fileID: 114863000469489752, guid: 84b110ddaa483324bb0ee7c7e38f7162,
           type: 2}
-        m_MethodName: 
+        m_MethodName: B_Attack_1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
