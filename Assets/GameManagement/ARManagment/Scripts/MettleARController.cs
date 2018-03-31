@@ -16,7 +16,7 @@
         //ARCore stuff
         //
         //UI objects
-        public GameObject SearchingForPlaneUI, StartingUI, PlayingUI, EndingUI, QuitUI, DebugUI, CombatUI;
+        public GameObject SearchingForPlaneUI, StartingUI, PlayingUI, EndingUI, QuitUI, DebugUI;
 
         public Camera FirstPersonCamera;
 
@@ -150,7 +150,7 @@
             while (currentstate == GAME_STATE.STARTING) {
 
                 StartingUI.SetActive(true);
-                CombatUI.SetActive(false);
+                //CombatUI.SetActive(false);
                 SearchingForPlaneUI.SetActive(true);
 
                 Touch touch;
@@ -195,7 +195,7 @@
                 SearchingForPlaneUI.SetActive(false);
                 StartingUI.SetActive(false);
                 PlayingUI.SetActive(true);
-                CombatUI.SetActive(true);      
+                //CombatUI.SetActive(true);      
                 QuitUI.SetActive(false);
                 m_GumBall.SetActive(true);
  
@@ -214,7 +214,7 @@
 
                 PlayingUI.SetActive(false);
                 EndingUI.SetActive(true);
-                CombatUI.SetActive(false);          
+                //CombatUI.SetActive(false);          
                 QuitUI.SetActive(false);
                 m_GumBall.SetActive(false);
 
@@ -235,8 +235,8 @@
             m_PlayerSpawn = GameObject.FindGameObjectWithTag("playerSpawn").transform;
             var mettlePlayerInstance = Instantiate(MettlePlayerPrefab, m_PlayerSpawn.transform.position, Quaternion.LookRotation(m_EnemySpawn.transform.position - this.transform.position));
 
-            //m_EnemySpawn = GameObject.FindGameObjectWithTag("enemySpawn").transform;
-            //var mettleEnemyInstance = Instantiate(MettleEnemyPrefab, m_EnemySpawn.transform.position, Quaternion.LookRotation(m_PlayerSpawn.transform.position - this.transform.position));
+            m_EnemySpawn = GameObject.FindGameObjectWithTag("enemySpawn").transform;
+            var mettleEnemyInstance = Instantiate(MettleEnemyPrefab, m_EnemySpawn.transform.position, Quaternion.LookRotation(m_PlayerSpawn.transform.position - this.transform.position));
 
             allMettlesSpawned.Value = true;
        

@@ -312,6 +312,8 @@
     <Compile Include="Assets\_prefabs\Stage\_scripts\WeatherFX.cs" />
     <Compile Include="Assets\_prefabs\UI\Scripts\B_Attack.cs" />
     <Compile Include="Assets\_prefabs\UI\Scripts\ButtonResponses.cs" />
+    <Compile Include="Assets\_prefabs\UI\Scripts\DebugButton.cs" />
+    <Compile Include="Assets\_prefabs\UI\Scripts\UIManager.cs" />
     <Compile Include="Assets\Characters\_Enemy\_Scripts\AI_Enemy.cs" />
     <Compile Include="Assets\Characters\_Enemy\_Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Characters\_Enemy\_Scripts\LineOfSightConverted.cs" />

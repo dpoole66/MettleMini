@@ -3,6 +3,7 @@ SceneListBegin?
 Assets/_scenes/BattlePlayerA.unity
 SceneListEnd?
 340c9972508d1bd9cc5eb4a074ed0a6b Assembly-CSharp.dll:.MiniInputController
+7652e3b40055ee8a6667851f32dced6c Assembly-CSharp.dll:.MiniMovementController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AttackAction
 7ba1e84ad3d2d8813486668e75f842ce Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.ExtinguishableParticleSystem
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -139,6 +140,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GoogleARCore.EnvironmentalLight
 0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp.dll:.PlayerController
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MiniTouchInputController2
 038e996a62c368156e866dca04564427 Assembly-CSharp.dll:.AIMettleControl
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ActiveStateDecision
 2e913668fbeb6ae352c88675e2f15070 Assembly-CSharp.dll:.BoolVariable
@@ -153,7 +155,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 02a672d57c9864ecc3818d7a8a728e27 Assembly-CSharp.dll:.MettleHit
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.DragRigidbody
-02a672d57c9864ecc3818d7a8a728e27 Assembly-CSharp.dll:.DetectHit
+2e010304a306d37a0bb9656c600672c4 Assembly-CSharp.dll:.DetectHit
 86bcc8a106dff491129d7e6844140074 Assembly-CSharp.dll:.PlayerController2
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PursueAction
 78ebae5ed9b3edeb216da437b99754a4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
@@ -255,6 +257,7 @@ f536c7a050e279eda0ede415cbfb77a8 Assembly-CSharp.dll:.GameManagerAR
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.IdleAction
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GoogleARCore.HelloAR.PointcloudVisualizer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.MobileControlRig
+c2469b3bcf7dfc15546cc26287ccf920 Assembly-CSharp.dll:.MiniCombatController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.ObjectResetter
 e97ff9540a49b92b779792c195839d33 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.AfterburnerPhysicsForce
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.FireLight
@@ -309,7 +312,7 @@ a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 179c6b3a64a3402bc807b1f9778a270d Assembly-CSharp.dll:.MettleMovement
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GoogleARCore.TrackedPlaneVisualizer
 0ad469aca31264c6140b1e503c43ab6b Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.TimedObjectDestructor
-e016c62c8b1e81191a973c8b24279a9e Assembly-CSharp.dll:GoogleARCore.MettleARController
+f971c78c323b6b22b9dff4ec42935b44 Assembly-CSharp.dll:GoogleARCore.MettleARController
 bba003782b82def5ef84f9735584f52f Assembly-CSharp.dll:.DrawSightLine
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NPC_Audio
 f4b175ffc1eeca85d2783436b4c764a7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.Explosive
@@ -396,6 +399,5 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-7652e3b40055ee8a6667851f32dced6c Assembly-CSharp.dll:.MiniMovementController
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MiniTouchInputController2
-b9dc30dee4a9111e0d3edabaa47f114a Assembly-CSharp.dll:.MiniCombatController
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DebugButton
+dae0422f8a15706af423bb471de476e6 Assembly-CSharp.dll:.UIManager

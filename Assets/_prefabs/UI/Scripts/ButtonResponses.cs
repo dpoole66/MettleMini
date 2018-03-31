@@ -2,20 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ButtonResponses : MonoBehaviour {
 
-    private MiniInputController m_MiC;
+    Button thisButton;
+    private GameObject m_Player;
+    private MiniCombatController m_McC;
 
     private void Awake() {
 
-        m_MiC = GetComponent<MiniInputController>();
+        thisButton = GetComponent<Button>();
+        //on click
+        thisButton.onClick.AddListener(() => { Attack_1(); });
 
     }
 
-    public void OnMouseDown() {
+    public void Attack_1() {
         
-            m_MiC.Attack_1();
+            m_McC.Attack_1();
 
     }
 }

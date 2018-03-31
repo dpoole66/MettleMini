@@ -9,6 +9,7 @@ public class DetectHit : MonoBehaviour {
     //private Slider m_E_healthbar;
     //Animator m_Anim;
     public string m_Opponent;
+    public float m_Health = 100.0f;
 
     void Start() {
 
@@ -26,22 +27,23 @@ public class DetectHit : MonoBehaviour {
         if (other.gameObject.tag != m_Opponent) {
 
             //m_Anim.SetBool("isHit", true);
+           
             Debug.Log("Hit");
             return;
 
-        } //else  {
+        } else  {
 
-            //m_E_healthbar.value -= 5;
+            m_Health -= 5;
 
-        //}
+            }
 
-        //if(m_E_healthbar.value <= 0){
+            if(m_Health <= 0){
 
-            //m_Anim.SetBool("isDead", true);
+            Destroy(this.gameObject);
 
-       // }
-      
-    }
+            }
+
+        }
 
     private void OnTriggerExit(Collider other) {
         //m_Anim.SetBool("isHit", false);
