@@ -317,11 +317,14 @@
     <Compile Include="Assets\Characters\_Enemy\_Scripts\LineOfSightConverted.cs" />
     <Compile Include="Assets\Characters\_Enemy\_Scripts\LineSight.cs" />
     <Compile Include="Assets\Characters\_Enemy\_Scripts\LineSightLtd.cs" />
+    <Compile Include="Assets\Characters\_Player\_Scripts\MiniCombatController.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\MiniContorller.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\MiniInputController.cs" />
+    <Compile Include="Assets\Characters\_Player\_Scripts\MiniMovementController.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\MiniTouchInputController.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\Older\DumDum.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\Older\MiniControllerX.cs" />
+    <Compile Include="Assets\Characters\_Player\_Scripts\Older\MiniTouchInputController2.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\Older\PlayerController2.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\Older\PlayerControllerMini.cs" />
     <Compile Include="Assets\Characters\_Player\_Scripts\PlayerHealth.cs" />

@@ -9,17 +9,17 @@ using UnityEngine.EventSystems;
 public class MiniTouchInputController : MonoBehaviour {
 
 
-    [HideInInspector] public Animator m_Anim;
+    [HideInInspector] public Animator m_Anim;   //MiniMovement
     [HideInInspector] public Rigidbody m_Rigid;
     public Transform m_Enemy;
     private bool move = false;
-    private Transform m_PlayerTrans;
-    private Vector3 destinationPos;
-    private float destinationDis;
+    private Transform m_PlayerTrans;       //MiniMovement
+    private Vector3 destinationPos;      //MiniMovement
+    private float destinationDis;       //MiniMovement
     private bool inRange = false;
-    public float setMovementRange = 0.01f;
-    public float Speed = 0.3f;
-    private float m_Speed;
+    public float setMovementRange = 0.01f;    //MiniMovement
+    public float Speed = 0.3f;    //MiniMovement
+    private float m_Speed;      //MiniMovement
     //Combat
     public float enGuardRange = 0.2f;
     public float attackRange = 0.1f;
@@ -113,7 +113,6 @@ public class MiniTouchInputController : MonoBehaviour {
             m_Anim.SetTrigger("Chaseing");
 
         }
-
 
     }
 
