@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using GoogleARCore;
 
 [RequireComponent(typeof(Animator))]
 
@@ -22,6 +25,10 @@ public class MiniContorller : MonoBehaviour {
     public float enGuardRange;
     public float attackRange;
     public Button b_Attack;
+
+    private MettleARController marc;
+    private Transform mettleStage;
+    public float MoveClamp;
                  
 
     void Start() {
@@ -35,6 +42,7 @@ public class MiniContorller : MonoBehaviour {
         //attack button
         Button b_Attack = GetComponent<Button>();
         b_Attack.onClick.AddListener(B_Attack_1);
+        
 
     }
 
@@ -79,7 +87,7 @@ public class MiniContorller : MonoBehaviour {
         }
 
         //touch/mouse input to move player
-        if (Input.GetMouseButton(0) && !inRange) {
+        if (Input.GetMouseButton(0) && !inRange && !IsPointerOverUIObject()) {
 
             m_Speed = 3.0f;
             Plane playerPlane = new Plane(Vector3.up, m_PlayerTrans.position);
@@ -122,12 +130,27 @@ public class MiniContorller : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
-    void FixedUpdate() {
+    //UI Touch and Button control to prevent raycast passthrough
+    private bool IsPointerOverUIObject() {
 
-        //monitor distance between player and destinationPos
-        destinationDis = Vector3.Distance(destinationPos, m_PlayerTrans.position);
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current) {
+            position = new Vector2(Input.mousePosition.x, Input.mousePosition.y)
+        };
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
 
+    }
+
+    public void GetMovementRange(Vector3 mvRange){
+
+        //move clamp
+        mettleStage = GetComponent<MettleARController>().mettleStageInstance.transform;
+  
+        mvRange = Vector3.ClampMagnitude(mettleStage.transform.position,MoveClamp);
+
+        return;
+        
     }
 
     //Methods
@@ -166,4 +189,6 @@ public class MiniContorller : MonoBehaviour {
         yield break;
 
     }
+
+
 }

@@ -22,10 +22,10 @@
 
         // Tracking components
         public GameObject TrackedPlanePrefab;
+        public GameObject planePrefab;
         //private GameObject planePrefab;  
         //private Anchor anchor;
-
-
+   
         /// A list to hold NEW planes ARCore began tracking in the current frame.       
         private List<TrackedPlane> m_NewPlanes = new List<TrackedPlane>();
         /// A list to hold ALL planes ARCore is tracking in the current frame.          
@@ -40,7 +40,7 @@
         public Transform m_PlayerSpawn, m_EnemySpawn;
         //Stage
         public GameObject MettleStagePrefab;
-        //private GameObject mettleStageInstance;
+        [HideInInspector] public GameObject mettleStageInstance;
         //Mettles
         public GameObject MettlePlayerPrefab, MettleEnemyPrefab;
         //private GameObject mettlePlayerInstance;
@@ -134,7 +134,7 @@
             bool showSearchingUI = true;
             for (int i = 0; i < m_AllPlanes.Count; i++) {
                 if (m_AllPlanes[i].TrackingState == TrackingState.Tracking) {
-                    showSearchingUI = false;
+                    showSearchingUI = false;         
                     break;
                 }
             }

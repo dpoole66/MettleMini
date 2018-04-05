@@ -48,7 +48,7 @@ public class MiniCombatController : MonoBehaviour {
     //Combat
     public void B_Attack_1() {     //UI Attack button
         m_Anim.SetTrigger("Attack");
-        //StartCoroutine(Attack_1());
+        StartCoroutine(Attack_1());
         return;
 
     }

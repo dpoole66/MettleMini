@@ -15,7 +15,7 @@ public class PlayerPlacement : MonoBehaviour {
 
     private void Start() {
 
-        m_GameManagerAR = GameObject.Find("GameControllerAR"). GetComponent<GameManagerAR>();
+        //m_GameManagerAR = GameObject.Find("GameControllerAR"). GetComponent<GameManagerAR>();
         m_PlayBall = this.gameObject;
         m_PlayBall.SetActive(true);
 

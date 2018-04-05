@@ -340,7 +340,6 @@ GameObject:
   - component: {fileID: 54610270070820846}
   - component: {fileID: 136279713881302424}
   - component: {fileID: 195042929984816062}
-  - component: {fileID: 114765112919273538}
   - component: {fileID: 135836982880211104}
   m_Layer: 0
   m_Name: EnemyMini
@@ -2190,7 +2189,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1260135604164796}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3389, y: 0, z: 0.072}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 4025496481655266}
@@ -2482,7 +2481,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!54 &54665290070888322
 Rigidbody:
@@ -2715,18 +2714,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114765112919273538
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1260135604164796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 532a6625be6f3454984f3b3e4d2682ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Opponent: PlayerSword
 --- !u!114 &114811120108699886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2764,7 +2751,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 3.06
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136279713881302424
 CapsuleCollider:
@@ -3028,7 +3015,7 @@ NavMeshAgent:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1260135604164796}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.4
   m_Speed: 1

@@ -18,8 +18,7 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-namespace GoogleARCore
-{
+namespace GoogleARCore {
     using System.Collections.Generic;
     using GoogleARCore;
     using UnityEngine;
@@ -27,8 +26,7 @@ namespace GoogleARCore
     /// <summary>
     /// Visualizes a TrackedPlane in the Unity scene.
     /// </summary>
-    public class TrackedPlaneVisualizer : MonoBehaviour
-    {
+    public class TrackedPlaneVisualizer : MonoBehaviour {
         private static int s_PlaneCount = 0;
 
         private readonly Color[] k_PlaneColors = new Color[]
@@ -68,8 +66,7 @@ namespace GoogleARCore
         /// <summary>
         /// The Unity Awake() method.
         /// </summary>
-        public void Awake()
-        {
+        public void Awake() {
             m_Mesh = GetComponent<MeshFilter>().mesh;
             m_MeshRenderer = GetComponent<UnityEngine.MeshRenderer>();
         }
@@ -77,21 +74,15 @@ namespace GoogleARCore
         /// <summary>
         /// The Unity Update() method.
         /// </summary>
-        public void Update()
-        {
-            if (m_TrackedPlane == null)
-            {
+        public void Update() {
+            if (m_TrackedPlane == null) {
                 return;
-            }
-            else if (m_TrackedPlane.SubsumedBy != null)
-            {
+            } else if (m_TrackedPlane.SubsumedBy != null) {
                 Destroy(gameObject);
                 return;
-            }
-            else if (m_TrackedPlane.TrackingState != TrackingState.Tracking)
-            {
-                 m_MeshRenderer.enabled = false;
-                 return;
+            } else if (m_TrackedPlane.TrackingState != TrackingState.Tracking) {
+                m_MeshRenderer.enabled = false;
+                return;
             }
 
             m_MeshRenderer.enabled = true;
@@ -103,8 +94,7 @@ namespace GoogleARCore
         /// Initializes the TrackedPlaneVisualizer with a TrackedPlane.
         /// </summary>
         /// <param name="plane">The plane to vizualize.</param>
-        public void Initialize(TrackedPlane plane)
-        {
+        public void Initialize(TrackedPlane plane) {
             m_TrackedPlane = plane;
             m_MeshRenderer.material.SetColor("_GridColor", k_PlaneColors[s_PlaneCount++ % k_PlaneColors.Length]);
             m_MeshRenderer.material.SetFloat("_UvRotation", Random.Range(0.0f, 360.0f));
@@ -115,12 +105,10 @@ namespace GoogleARCore
         /// <summary>
         /// Update mesh with a list of Vector3 and plane's center position.
         /// </summary>
-        private void _UpdateMeshIfNeeded()
-        {
+        private void _UpdateMeshIfNeeded() {
             m_TrackedPlane.GetBoundaryPolygon(m_MeshVertices);
 
-            if (_AreVerticesListsEqual(m_PreviousFrameMeshVertices, m_MeshVertices))
-            {
+            if (_AreVerticesListsEqual(m_PreviousFrameMeshVertices, m_MeshVertices)) {
                 return;
             }
 
@@ -144,8 +132,7 @@ namespace GoogleARCore
             m_MeshColors.Clear();
 
             // Fill transparent color to vertices 0 to 3.
-            for (int i = 0; i < planePolygonCount; ++i)
-            {
+            for (int i = 0; i < planePolygonCount; ++i) {
                 m_MeshColors.Add(Color.clear);
             }
 
@@ -156,8 +143,7 @@ namespace GoogleARCore
             const float featherScale = 0.2f;
 
             // Add vertex 4 to 7.
-            for (int i = 0; i < planePolygonCount; ++i)
-            {
+            for (int i = 0; i < planePolygonCount; ++i) {
                 Vector3 v = m_MeshVertices[i];
 
                 // Vector from plane center to current point
@@ -174,8 +160,7 @@ namespace GoogleARCore
             int firstInnerVertex = planePolygonCount;
 
             // Generate triangle (4, 5, 6) and (4, 6, 7).
-            for (int i = 0; i < planePolygonCount - 2; ++i)
-            {
+            for (int i = 0; i < planePolygonCount - 2; ++i) {
                 m_MeshIndices.Add(firstInnerVertex);
                 m_MeshIndices.Add(firstInnerVertex + i + 1);
                 m_MeshIndices.Add(firstInnerVertex + i + 2);
@@ -183,8 +168,7 @@ namespace GoogleARCore
 
             // Generate triangle (0, 1, 4), (4, 1, 5), (5, 1, 2), (5, 2, 6), (6, 2, 3), (6, 3, 7)
             // (7, 3, 0), (7, 0, 4)
-            for (int i = 0; i < planePolygonCount; ++i)
-            {
+            for (int i = 0; i < planePolygonCount; ++i) {
                 int outerVertex1 = firstOuterVertex + i;
                 int outerVertex2 = firstOuterVertex + ((i + 1) % planePolygonCount);
                 int innerVertex1 = firstInnerVertex + i;
@@ -205,17 +189,13 @@ namespace GoogleARCore
             m_Mesh.SetColors(m_MeshColors);
         }
 
-        private bool _AreVerticesListsEqual(List<Vector3> firstList, List<Vector3> secondList)
-        {
-            if (firstList.Count != secondList.Count)
-            {
+        private bool _AreVerticesListsEqual(List<Vector3> firstList, List<Vector3> secondList) {
+            if (firstList.Count != secondList.Count) {
                 return false;
             }
 
-            for (int i = 0; i < firstList.Count; i++)
-            {
-                if (firstList[i] != secondList[i])
-                {
+            for (int i = 0; i < firstList.Count; i++) {
+                if (firstList[i] != secondList[i]) {
                     return false;
                 }
             }

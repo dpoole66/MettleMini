@@ -30,6 +30,7 @@ TagManager:
   - EnemyUI
   - PlayerUI
   - Button
+  - Stage
   layers:
   - Default
   - TransparentFX

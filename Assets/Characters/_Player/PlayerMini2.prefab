@@ -417,9 +417,10 @@ GameObject:
   - component: {fileID: 95943803528841234}
   - component: {fileID: 54025302643769156}
   - component: {fileID: 136214689649086938}
-  - component: {fileID: 114709334396512664}
   - component: {fileID: 114028365918667214}
   - component: {fileID: 114682566989225894}
+  - component: {fileID: 114751550835940272}
+  - component: {fileID: 114127905426549344}
   m_Layer: 0
   m_Name: PlayerMini2
   m_TagString: Player
@@ -1342,7 +1343,7 @@ Transform:
   m_GameObject: {fileID: 1315142198955146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_Children:
   - {fileID: 4421936597981908}
   - {fileID: 4540485249159296}
@@ -2466,11 +2467,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1315142198955146}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eb158208f5b6f344a4a7c31ecb92949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Stage: {fileID: 1499031588445792, guid: 5db33da54782be84496e21de65a27823, type: 2}
   m_Anim: {fileID: 0}
   m_Rigid: {fileID: 0}
   targetPoint: {x: 0, y: 0, z: 0}
@@ -2515,6 +2517,25 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114127905426549344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315142198955146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15aecfe6fe74c9b4d9a4a6e919627474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Anim: {fileID: 0}
+  m_Rigid: {fileID: 0}
+  m_Enemy: {fileID: 4922502457815098, guid: 3d3e883a1c5c7744385887967700f6e4, type: 2}
+  setMovementRange: 0
+  Speed: 0.3
+  enGuardRange: 0
+  attackRange: 0
+  b_Attack: {fileID: 114304842131932160}
 --- !u!114 &114228332930189318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2597,7 +2618,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114682566989225894}
+      - m_Target: {fileID: 114127905426549344}
         m_MethodName: B_Attack_1
         m_Mode: 1
         m_Arguments:
@@ -2745,7 +2766,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1315142198955146}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a09fef73d3ebf242bc70b8ae23d234a, type: 3}
   m_Name: 
@@ -2758,7 +2779,7 @@ MonoBehaviour:
   b_Attack: {fileID: 114825212195564058, guid: 1868ca009bfa40a4b997dc68f56a9a64, type: 2}
   b_Defend: {fileID: 114422042528187172, guid: 1868ca009bfa40a4b997dc68f56a9a64, type: 2}
   debugUI: {fileID: 1777749228083000, guid: 01b0b272085d0da4ab7ce8782b6cba0a, type: 2}
---- !u!114 &114709334396512664
+--- !u!114 &114751550835940272
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2766,16 +2787,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1315142198955146}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1c4f7f913966ad4789c89fff0b96ccd, type: 3}
+  m_Script: {fileID: 11500000, guid: d98bea402f53a334998d56801f807f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Anim: {fileID: 0}
   m_Rigid: {fileID: 0}
-  m_Enemy: {fileID: 4985960006659620, guid: 1ec940afd5b131644a69ca50b04d8945, type: 2}
+  targetPoint: {x: 0, y: 0, z: 0}
+  rangeFinder: 0
   setMovementRange: 0.01
   Speed: 0.3
-  enGuardRange: 0.2
-  attackRange: 0.1
+  isMoveing: 0
 --- !u!114 &114823540921683508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2875,7 +2896,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114682566989225894}
+      - m_Target: {fileID: 114127905426549344}
         m_MethodName: B_Defend_1
         m_Mode: 1
         m_Arguments:

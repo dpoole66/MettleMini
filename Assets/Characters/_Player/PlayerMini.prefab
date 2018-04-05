@@ -82,11 +82,9 @@ GameObject:
   - component: {fileID: 95354443816441320}
   - component: {fileID: 195251828887050066}
   - component: {fileID: 54367091425581738}
-  - component: {fileID: 136281121128171362}
-  - component: {fileID: 114702717041448598}
-  - component: {fileID: 114193387513111422}
-  - component: {fileID: 114559702228457470}
-  - component: {fileID: 143387773955834050}
+  - component: {fileID: 114071620207520442}
+  - component: {fileID: 114303450380529190}
+  - component: {fileID: 114433267209420022}
   m_Layer: 0
   m_Name: PlayerMini
   m_TagString: Player
@@ -410,7 +408,7 @@ GameObject:
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -982381405332843317, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2312,13 +2310,13 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1076823757198380}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &65229186612950896
 BoxCollider:
@@ -2365,7 +2363,7 @@ Animator:
   m_GameObject: {fileID: 1076823757198380}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a94981f324050b644afea09026f8c44b, type: 3}
-  m_Controller: {fileID: 9100000, guid: 696415fc00f8a6943b729a723d623fc1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 588412d414821b44ead1a71fbc607e52, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2373,7 +2371,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114193387513111422
+--- !u!114 &114071620207520442
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2381,10 +2379,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076823757198380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86efc8150056daa4693cad92eb9e4eea, type: 3}
+  m_Script: {fileID: 11500000, guid: 345145e822701dc4086301c3d772a8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Opponent: EnemySword
+  head: {fileID: 4326864042374204}
+  lookAtTargetPosition: {x: 0, y: 0, z: 0}
+  lookAtCoolTime: 2
+  lookAtHeatTime: 2
+  looking: 1
+--- !u!114 &114303450380529190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076823757198380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f7d2d4a88cd004c88ce8588d02dd25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Enemy: {fileID: 4922502457815098, guid: 3d3e883a1c5c7744385887967700f6e4, type: 2}
+--- !u!114 &114433267209420022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076823757198380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ef3b2c5a331b6459e6a8fd8ec815be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Agent: {fileID: 195251828887050066}
 --- !u!114 &114559048020746496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2406,24 +2432,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114559702228457470
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076823757198380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 643a73df4627c514789ef1f130607936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0.3
-  moveAnimSpeed: 0
-  animSpeed: 1.5
-  idleState: 1432961145
-  chaseState: -1897952685
-  Direction: 1
-  m_Anim: {fileID: 0}
 --- !u!114 &114587648653502282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2488,20 +2496,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114702717041448598
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076823757198380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e83ccfe51cb519c408e1770958b75fc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StartingHealth: 100
-  m_HealthUI: {fileID: 114660472498662546}
-  m_HealthNow: 0
 --- !u!114 &114977471134815506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2529,19 +2523,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 0
   m_FillOrigin: 0
---- !u!136 &136281121128171362
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076823757198380}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.6
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!137 &137028841519265858
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2785,33 +2766,16 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.017369509, y: 0.2738399, z: -0.003831923}
     m_Extent: {x: 0.1617584, y: 0.14892209, z: 0.17850196}
   m_DirtyAABB: 0
---- !u!143 &143387773955834050
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076823757198380}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &195251828887050066
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1076823757198380}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.4
-  m_Speed: 0.25
+  m_Radius: 0.3
+  m_Speed: 1
   m_Acceleration: 0.5
   avoidancePriority: 50
   m_AngularSpeed: 180
@@ -2819,7 +2783,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.7
+  m_Height: 1.6
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

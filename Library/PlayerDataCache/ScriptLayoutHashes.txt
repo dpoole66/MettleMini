@@ -1,9 +1,9 @@
 Android
 SceneListBegin?
-Assets/_scenes/BattlePlayerA.unity
+Assets/_scenes/PlayerMovement.unity
 SceneListEnd?
 340c9972508d1bd9cc5eb4a074ed0a6b Assembly-CSharp.dll:.MiniInputController
-7652e3b40055ee8a6667851f32dced6c Assembly-CSharp.dll:.MiniMovementController
+6464eccbabc9e89fe3ddd41575f55611 Assembly-CSharp.dll:.MiniMovementController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AttackAction
 7ba1e84ad3d2d8813486668e75f842ce Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.ExtinguishableParticleSystem
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -244,8 +244,9 @@ fe76270bd84ec3b6f2f6f92c69cf69da Assembly-CSharp-firstpass.dll:UnityStandardAsse
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.SimpleMove
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DetectHitShield
 a7d3c6c6948d99dd4116e659ddcf5ac4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.ButtonHandler
-6a8716d726b6dc42e5369436e460c9e7 Assembly-CSharp.dll:.MiniContorller
+4c518810853b9d646fa3c6f71c4192e7 Assembly-CSharp.dll:.MiniContorller
 83877f03b51b3b13fa0d6c51291e0575 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.FirstPerson.HeadBob
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DebugButton
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl
 a90e94673f50d2237c1b971c138660c6 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMoveAndRotate
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.ForcedReset
@@ -263,6 +264,7 @@ e97ff9540a49b92b779792c195839d33 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.FireLight
 bc652805187db73e62e81b437aae1e7a Assembly-CSharp.dll:.LineSightLtd
 e6ce390d192c3ed0881f7f8223ba6eb0 Assembly-CSharp.dll:.RotateTo
+dae0422f8a15706af423bb471de476e6 Assembly-CSharp.dll:.UIManager
 869e5abc2271c3b618904edff22e38ef Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.ExplosionFireAndDebris
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -312,7 +314,7 @@ a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 179c6b3a64a3402bc807b1f9778a270d Assembly-CSharp.dll:.MettleMovement
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GoogleARCore.TrackedPlaneVisualizer
 0ad469aca31264c6140b1e503c43ab6b Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.TimedObjectDestructor
-f971c78c323b6b22b9dff4ec42935b44 Assembly-CSharp.dll:GoogleARCore.MettleARController
+41da686ce1001d349d2674871da81dcb Assembly-CSharp.dll:GoogleARCore.MettleARController
 bba003782b82def5ef84f9735584f52f Assembly-CSharp.dll:.DrawSightLine
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NPC_Audio
 f4b175ffc1eeca85d2783436b4c764a7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.Explosive
@@ -399,5 +401,5 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DebugButton
-dae0422f8a15706af423bb471de476e6 Assembly-CSharp.dll:.UIManager
+7652e3b40055ee8a6667851f32dced6c Assembly-CSharp.dll:.NewMover
+b65e9f4ac77fa435fc5f38ea5006eb80 Assembly-CSharp.dll:.DragPlayer
