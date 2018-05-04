@@ -10,25 +10,11 @@ public class LineSight : MonoBehaviour
 	//Sight sensitivity
 	public SightSensitivity Sensitity = SightSensitivity.STRICT;
 
-    // DumDum
-    //public TransformRef m_LookTarget;          
-
-	//Can we see target
-	public bool CanSeeTarget = false;
-
-	//FOV
-	public float FieldOfView = 45f;
-
-	//Reference to target   
-	[HideInInspector] public Transform Target = null;
-
-	//Reference to eyes
-	public Transform EyePoint = null;
-
-	//Reference to transform component
-	private Transform ThisTransform = null;
-
-	//Reference to sphere collider
+	public bool CanSeeTarget = false;       
+	public float FieldOfView = 45f;             
+	[HideInInspector] public Transform Target = null;       
+	public Transform EyePoint = null;       
+	private Transform ThisTransform = null;    
 	private SphereCollider ThisCollider = null;
 
 	//Reference to last know object sighting, if any
@@ -39,7 +25,7 @@ public class LineSight : MonoBehaviour
 		ThisTransform = GetComponent<Transform>();
 		ThisCollider = GetComponent<SphereCollider>();
 		LastKnowSighting = ThisTransform.position;
-        Target = GameObject.Find("PlayerMini(Clone)").transform;
+        Target = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 	//------------------------------------------
 	bool InFOV()
@@ -63,9 +49,9 @@ public class LineSight : MonoBehaviour
 		RaycastHit Info;
 	
 		if(Physics.Raycast(EyePoint.position, (Target.position - EyePoint.position).normalized, out Info, ThisCollider.radius))
-		{                                                                                                                           
-			//If player, then can see player
-			if(Info.transform.CompareTag("Player"))
+		{
+            //If player, then can see player
+            if (Info.transform.CompareTag("Player"))      
 				return true;
 		}
 

@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 33548559441181462}
   - component: {fileID: 65402913096423438}
   - component: {fileID: 23197639621649480}
-  - component: {fileID: 114276908037057144}
   - component: {fileID: 195224245241006324}
-  - component: {fileID: 114110109768973642}
+  - component: {fileID: 95363396872193750}
+  - component: {fileID: 114491993340184536}
   m_Layer: 0
   m_Name: DumEnemy
   m_TagString: Enemy
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1854187453912618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.079692036, y: 0.09, z: -0.304}
+  m_LocalPosition: {x: 0, y: 0.083, z: -0.371}
   m_LocalScale: {x: 0.06864482, y: 0.06864482, z: 0.06864482}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,7 +98,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114110109768973642
+--- !u!95 &95363396872193750
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854187453912618}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 8c5bd5881d61ef24db9743039de52ccf, type: 3}
+  m_Controller: {fileID: 9100000, guid: 69dc646645b3d5247ab0e89516eee6c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114491993340184536
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -106,24 +123,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854187453912618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ab7854fb63a60a4c918a87e625b3e68, type: 3}
+  m_Script: {fileID: 11500000, guid: ecc9ef305979c3a4cb9e6d59899dc8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Enemy: {fileID: 0}
-  m_EnemyRange: 0
-  m_EnemyRotation: 0
---- !u!114 &114276908037057144
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1854187453912618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d55cab84d976e64bbe237ca1286e8c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!195 &195224245241006324
 NavMeshAgent:
   m_ObjectHideFlags: 1

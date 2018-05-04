@@ -82,9 +82,7 @@ GameObject:
   - component: {fileID: 95354443816441320}
   - component: {fileID: 195251828887050066}
   - component: {fileID: 54367091425581738}
-  - component: {fileID: 114071620207520442}
-  - component: {fileID: 114303450380529190}
-  - component: {fileID: 114433267209420022}
+  - component: {fileID: 114564663092306320}
   m_Layer: 0
   m_Name: PlayerMini
   m_TagString: Player
@@ -2371,46 +2369,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114071620207520442
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076823757198380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 345145e822701dc4086301c3d772a8dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  head: {fileID: 4326864042374204}
-  lookAtTargetPosition: {x: 0, y: 0, z: 0}
-  lookAtCoolTime: 2
-  lookAtHeatTime: 2
-  looking: 1
---- !u!114 &114303450380529190
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076823757198380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72f7d2d4a88cd004c88ce8588d02dd25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Enemy: {fileID: 4922502457815098, guid: 3d3e883a1c5c7744385887967700f6e4, type: 2}
---- !u!114 &114433267209420022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1076823757198380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3ef3b2c5a331b6459e6a8fd8ec815be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Agent: {fileID: 195251828887050066}
 --- !u!114 &114559048020746496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2432,6 +2390,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114564663092306320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076823757198380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e72aba685657143a6d29b63d7b6298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 100
 --- !u!114 &114587648653502282
 MonoBehaviour:
   m_ObjectHideFlags: 1

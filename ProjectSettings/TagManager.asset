@@ -31,6 +31,12 @@ TagManager:
   - PlayerUI
   - Button
   - Stage
+  - GameStateUI
+  - MessageUI
+  - PlayerStateUI
+  - playerPlane
+  - ARManager
+  - waypoint
   layers:
   - Default
   - TransparentFX

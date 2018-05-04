@@ -50,9 +50,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_scenes/NoNavStage.unity
     guid: c80062c82875b3944a1d0e8b0c52b6e8
-  - enabled: 0
+  - enabled: 1
     path: Assets/_scenes/BattlePlayerA.unity
     guid: a373b4b47136dac4ba320bdd9341efb7
-  - enabled: 1
+  - enabled: 0
     path: Assets/_scenes/PlayerMovement.unity
     guid: faf6ed64985159c4682fde369831710f

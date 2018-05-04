@@ -21,10 +21,7 @@
         public Camera FirstPersonCamera;
 
         // Tracking components
-        public GameObject TrackedPlanePrefab;
-        public GameObject planePrefab;
-        //private GameObject planePrefab;  
-        //private Anchor anchor;
+        public GameObject TrackedPlanePrefab;                   
    
         /// A list to hold NEW planes ARCore began tracking in the current frame.       
         private List<TrackedPlane> m_NewPlanes = new List<TrackedPlane>();
@@ -45,7 +42,7 @@
         public GameObject MettlePlayerPrefab, MettleEnemyPrefab;
         //private GameObject mettlePlayerInstance;
 
-        public GameObject m_GumBall;
+        //public GameObject m_GumBall;      removing this?
 
         public BoolReference allMettlesSpawned;
 
@@ -86,7 +83,8 @@
         //Body and Methods
         private void Start() {
 
-            CurrentState = GAME_STATE.STARTING;         
+            CurrentState = GAME_STATE.STARTING;    
+            
         }
 
         public void QuitButton() {
@@ -149,7 +147,7 @@
 
             while (currentstate == GAME_STATE.STARTING) {
 
-                StartingUI.SetActive(true);
+                StartingUI.SetActive(false);
                 //CombatUI.SetActive(false);
                 SearchingForPlaneUI.SetActive(true);
 
@@ -194,10 +192,8 @@
 
                 SearchingForPlaneUI.SetActive(false);
                 StartingUI.SetActive(false);
-                PlayingUI.SetActive(true);
-                //CombatUI.SetActive(true);      
-                QuitUI.SetActive(false);
-                m_GumBall.SetActive(true);
+                PlayingUI.SetActive(true);  
+                QuitUI.SetActive(false);    
  
 
                 yield return null;
@@ -210,13 +206,9 @@
 
             while (currentstate == GAME_STATE.ENDING) {
 
-                m_GumBall.SetActive(false);
-
                 PlayingUI.SetActive(false);
-                EndingUI.SetActive(true);
-                //CombatUI.SetActive(false);          
-                QuitUI.SetActive(false);
-                m_GumBall.SetActive(false);
+                EndingUI.SetActive(true);      
+                QuitUI.SetActive(false);       
 
                 yield return new WaitForSeconds(3);
 

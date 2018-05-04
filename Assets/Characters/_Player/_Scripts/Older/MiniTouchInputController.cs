@@ -147,7 +147,7 @@ public class MiniTouchInputController : MonoBehaviour {
         Vector3 relativePos = m_Enemy.position - m_PlayerTrans.position;
         Quaternion lookAtTarget = Quaternion.LookRotation(relativePos);
         m_PlayerTrans.rotation = lookAtTarget;
-        m_Anim.SetTrigger("Attack");
+        m_Anim.SetTrigger("Attacking");
         yield break;
 
     }
@@ -165,7 +165,7 @@ public class MiniTouchInputController : MonoBehaviour {
         Vector3 relativePos = m_Enemy.position - m_PlayerTrans.position;
         Quaternion lookAtTarget = Quaternion.LookRotation(relativePos);
         m_PlayerTrans.rotation = lookAtTarget;
-        m_Anim.SetTrigger("Defend");
+        m_Anim.SetTrigger("Defending");
         yield break;
 
 

@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576678327953858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.171, y: 0.08, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.053713888, y: 0.053713907, z: 0.053713907}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Opponent: PlayerSword
+  m_Health: 100
 --- !u!135 &135093637091324692
 SphereCollider:
   m_ObjectHideFlags: 1

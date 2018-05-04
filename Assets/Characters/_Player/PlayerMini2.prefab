@@ -417,10 +417,9 @@ GameObject:
   - component: {fileID: 95943803528841234}
   - component: {fileID: 54025302643769156}
   - component: {fileID: 136214689649086938}
-  - component: {fileID: 114028365918667214}
-  - component: {fileID: 114682566989225894}
-  - component: {fileID: 114751550835940272}
-  - component: {fileID: 114127905426549344}
+  - component: {fileID: 195143425660360712}
+  - component: {fileID: 114851350812335498}
+  - component: {fileID: 114030257601560742}
   m_Layer: 0
   m_Name: PlayerMini2
   m_TagString: Player
@@ -1342,7 +1341,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1315142198955146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.003, y: 0, z: -0.2309}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_Children:
   - {fileID: 4421936597981908}
@@ -2461,7 +2460,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114028365918667214
+--- !u!114 &114030257601560742
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2469,17 +2468,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1315142198955146}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb158208f5b6f344a4a7c31ecb92949, type: 3}
+  m_Script: {fileID: 11500000, guid: f1c4f7f913966ad4789c89fff0b96ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Stage: {fileID: 1499031588445792, guid: 5db33da54782be84496e21de65a27823, type: 2}
   m_Anim: {fileID: 0}
   m_Rigid: {fileID: 0}
-  targetPoint: {x: 0, y: 0, z: 0}
-  rangeFinder: 0
+  m_Enemy: {fileID: 0}
   setMovementRange: 0.01
   Speed: 0.3
-  isMoveing: 0
+  enGuardRange: 0.2
+  attackRange: 0.1
 --- !u!114 &114051879843127372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2517,25 +2515,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114127905426549344
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1315142198955146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15aecfe6fe74c9b4d9a4a6e919627474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Anim: {fileID: 0}
-  m_Rigid: {fileID: 0}
-  m_Enemy: {fileID: 4922502457815098, guid: 3d3e883a1c5c7744385887967700f6e4, type: 2}
-  setMovementRange: 0
-  Speed: 0.3
-  enGuardRange: 0
-  attackRange: 0
-  b_Attack: {fileID: 114304842131932160}
 --- !u!114 &114228332930189318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2618,7 +2597,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114127905426549344}
+      - m_Target: {fileID: 0}
         m_MethodName: B_Attack_1
         m_Mode: 1
         m_Arguments:
@@ -2726,8 +2705,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f19dca281f90b614b922594c22d7e951, type: 3}
-    m_FontSize: 88
+    m_Font: {fileID: 12800000, guid: f62bd30ed1282a34998ca8456294c4de, type: 3}
+    m_FontSize: 113
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2760,43 +2739,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114682566989225894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1315142198955146}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a09fef73d3ebf242bc70b8ae23d234a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Enemy: {fileID: 4985960006659620, guid: 1ec940afd5b131644a69ca50b04d8945, type: 2}
-  m_Anim: {fileID: 0}
-  enGuardRange: 0.2
-  attackRange: 0.1
-  combatRangeFinder: 0
-  b_Attack: {fileID: 114825212195564058, guid: 1868ca009bfa40a4b997dc68f56a9a64, type: 2}
-  b_Defend: {fileID: 114422042528187172, guid: 1868ca009bfa40a4b997dc68f56a9a64, type: 2}
-  debugUI: {fileID: 1777749228083000, guid: 01b0b272085d0da4ab7ce8782b6cba0a, type: 2}
---- !u!114 &114751550835940272
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1315142198955146}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d98bea402f53a334998d56801f807f20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Anim: {fileID: 0}
-  m_Rigid: {fileID: 0}
-  targetPoint: {x: 0, y: 0, z: 0}
-  rangeFinder: 0
-  setMovementRange: 0.01
-  Speed: 0.3
-  isMoveing: 0
 --- !u!114 &114823540921683508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2844,8 +2786,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f19dca281f90b614b922594c22d7e951, type: 3}
-    m_FontSize: 88
+    m_Font: {fileID: 12800000, guid: f62bd30ed1282a34998ca8456294c4de, type: 3}
+    m_FontSize: 113
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2857,6 +2799,26 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Defend
+--- !u!114 &114851350812335498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315142198955146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242dd9ada24214e4c88f7f272c38bf8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Anim: {fileID: 0}
+  m_Rigid: {fileID: 0}
+  m_Enemy: {fileID: 4144319397749300, guid: afbe13bc523d5a24d90f50a015d47695, type: 2}
+  setMovementRange: 0.1
+  Speed: 0.3
+  enGuardRange: 2
+  attackRange: 1
+  b_Attack: {fileID: 114304842131932160}
+  MoveClamp: 1
 --- !u!114 &114886262943165986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2896,7 +2858,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114127905426549344}
+      - m_Target: {fileID: 0}
         m_MethodName: B_Defend_1
         m_Mode: 1
         m_Arguments:
@@ -3165,6 +3127,27 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.017369509, y: 0.2738399, z: -0.003831923}
     m_Extent: {x: 0.1617584, y: 0.14892209, z: 0.17850196}
   m_DirtyAABB: 0
+--- !u!195 &195143425660360712
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315142198955146}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.33
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.6
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!222 &222167119658215236
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -3251,8 +3234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 360, y: 345}
-  m_SizeDelta: {x: 720, y: 259.1}
+  m_AnchoredPosition: {x: 361.5, y: 336.9999}
+  m_SizeDelta: {x: 723, y: 259.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224023425704563360
 RectTransform:
@@ -3363,7 +3346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1080, y: 345}
+  m_AnchoredPosition: {x: 1083, y: 337}
   m_SizeDelta: {x: 720, y: 259.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224823990594489810
